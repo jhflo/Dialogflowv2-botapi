@@ -1,0 +1,8 @@
+requests==2.21.0
+flask==1.1.1
+zeep==3.4.0
+urllib3==1.24.1
+dialogflow==0.6.0
+apiai==1.2.3
+protobuf3-to-dict==0.1.5
+

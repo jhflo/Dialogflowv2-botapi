@@ -1,0 +1,31 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: botapi
+spec:
+  selector:
+    app: botapi
+    tier: frontend
+  ports:
+  - protocol: "TCP"
+    port: 80
+    targetPort: 80
+  type: NodePort
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: botapi
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: botapi
+        tier: frontend
+        track: stable
+    spec:
+      containers:
+      - name: botapi
+        image: localhost/botapi:v1
+        
