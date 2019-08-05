@@ -3,7 +3,7 @@ import json
 from flask import Flask
 from flask import request
 from flask import jsonify
-from .nplv2 import nlpprocess
+from nplv2 import nlpprocess
 
 app = Flask(__name__)
 #app.run(host='0.0.0.0')
@@ -18,7 +18,7 @@ def index():
     webhook = request.data
     webhook = json.loads(webhook)
     datos = nlpprocess(webhook)
-    return jsonify(datos)
+    return jsonify(datos.processdata())
 
 
 
