@@ -24,9 +24,5 @@ def index():
 
 
 
-
-####Variables fijas AbaCoXBot#####
-
-
 if __name__ == "__main__":
     app.run()
