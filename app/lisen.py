@@ -6,7 +6,7 @@ from flask import jsonify
 from nplv2 import nlpprocess
 
 app = Flask(__name__)
-#app.run(host='0.0.0.0')
+#app.run(host='0.0.0.0', port=80)
 
 #Ruta de flask que escucha el Webhook de Cisco Spark creado para el bot
 @app.route('/dialogflow', methods=['POST'])
@@ -25,4 +25,4 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0', port=80)
