@@ -1,21 +1,11 @@
-API para conexion a bots en Dialogflow
+API for connecting to bots in Dialogflow
 
-Utilziando Flask se construyo un API para permitir que una aplicacion externa se conecte a Dialogflow solo enviando los 
-siguientes parametros en formato JSON:
+Using Flask an API was built to allow an external application to connect to Dialogflow only sending the following parameters in JSON format:
 
-Se envia un HTTP POST a la URL http/https://url-o-ip/dialogflow
+An HTTP POST is sent to the URL http / https: // url-o-ip / dialogflow
 
-{
-    "project_id": ID del proyecto correspondiente al bot,
-    "session_id": ID de la sesion,
-    "text": Texto a enviar para detectar el intent,
-    "lan": Lenguaje
-}
+{"project_id": ID of the project corresponding to the bot, "session_id": ID of the session, "text": Text to send to detect the intent, "lan": Language}
 
-El API respondera con un JSON con la siguiene estructura:
+The API will respond with a JSON with the following structure:
 
-{
-    "action": La accion del intent detectado, 
-    "response": Respuesta del bot en texto, 
-    "parameters": Parametros extraidos por el intent (si aplica)
-}
+{"action": The action of the detected intent, "response": Bot response in text, "parameters": Parameters extracted by the intent (if applicable)}
